@@ -18,4 +18,10 @@ RUN mv terraform /usr/bin/
 # Clean up
 RUN rm terraform_0.11.3_linux_amd64.zip
 
+# Install python
+RUN apk add --update build-base python-dev py-pip
+
+# Install awscli
+RUN pip install awscli
+
 CMD ["terraform", "version"]
