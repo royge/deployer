@@ -1,14 +1,3 @@
-# Builder image
-FROM golang:alpine as builder
-
-# Update and install git
-RUN apk update \
-  && apk add ca-certificates git \
-  && update-ca-certificates
-
-# Download awless from github
-RUN go get github.com/wallix/awless
-
 # The base image is alpine
 FROM alpine
 
@@ -26,16 +15,17 @@ RUN unzip terraform_0.11.3_linux_amd64.zip
 # Move terraform binary to /usr/bin
 RUN mv terraform /usr/bin/
 
-# Download awsless binary
-# RUN wget --no-check-certificate https://github.com/royge/awless-bin/archive/v0.1.0.zip
+# Download awless
+RUN wget --no-check-certificate https://github.com/wallix/awless/releases/download/v0.1.10/awless-linux-amd64.tar.gz
 
-# Copy awless binary from builder image
-COPY --from=builder /go/bin/awless .
+# Extract awless
+RUN tar -xvf awless-linux-amd64.tar.gz
 
-# Move awless to /usr/bin/
+# Move awless binary to /usr/bin
 RUN mv awless /usr/bin/
 
 # Clean up
 RUN rm terraform_0.11.3_linux_amd64.zip
+RUN rm awless-linux-amd64.tar.gz
 
 CMD ["terraform", "version"]
