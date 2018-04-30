@@ -22,7 +22,7 @@ RUN wget --no-check-certificate https://github.com/wallix/awless/releases/downlo
 RUN tar -xvf awless-linux-amd64.tar.gz
 
 # Move awless binary to /usr/bin
-RUN mv awless /usr/bin/
+RUN mv awless /usr/bin/ && chmod +x /usr/bin/awless && chown root:root /usr/bin/awless
 
 # Clean up
 RUN rm terraform_0.11.3_linux_amd64.zip
