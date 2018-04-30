@@ -26,6 +26,6 @@ RUN mv awless /usr/bin/
 
 # Clean up
 RUN rm terraform_0.11.3_linux_amd64.zip
-RUN rm awless-linux-amd64.tar.gz
+RUN rm awless-linux-386.tar.gz
 
 CMD ["terraform", "version"]
