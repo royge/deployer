@@ -3,7 +3,7 @@ FROM alpine
 
 # Update and install packages
 RUN apk update \
-  && apk add ca-certificates wget cmake \
+  && apk add ca-certificates wget make \
   && update-ca-certificates
 
 # Download terraform
