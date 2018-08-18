@@ -19,3 +19,13 @@ commandTests:
     command: "awless"
     args: ["version"]
     expectedOutput: ["v0.1.11"]
+
+  - name: "make installation"
+    command: "which"
+    args: ["make"]
+    expectedOutput: ["/usr/bin/make"]
+
+  - name: "make version"
+    command: "make"
+    args: ["-v"]
+    expectedOutput: ["GNU Make 4.2.*"]
