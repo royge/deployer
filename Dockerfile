@@ -16,7 +16,7 @@ RUN unzip terraform_0.11.3_linux_amd64.zip
 RUN mv terraform /usr/bin/
 
 # Download awless
-RUN wget --no-check-certificate https://github.com/wallix/awless/releases/download/v0.1.10/awless-linux-386.tar.gz
+RUN wget --no-check-certificate https://github.com/wallix/awless/releases/download/v0.1.11/awless-linux-386.tar.gz
 
 # Extract awless
 RUN tar -xvf awless-linux-386.tar.gz

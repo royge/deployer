@@ -18,4 +18,4 @@ commandTests:
   - name: "awless version"
     command: "awless"
     args: ["version"]
-    expectedOutput: ["v0.1.10"]
+    expectedOutput: ["v0.1.11"]
