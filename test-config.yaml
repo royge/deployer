@@ -8,7 +8,7 @@ commandTests:
   - name: "terraform version"
     command: "terraform"
     args: ["version"]
-    expectedOutput: ["*v0.11.3\n"]
+    expectedOutput: ["v0.11.3\n"]
 
   - name: "awless installation"
     command: "which"
@@ -18,4 +18,4 @@ commandTests:
   - name: "awless version"
     command: "awless"
     args: ["version"]
-    expectedOutput: ["*v0.1.10\n"]
+    expectedOutput: ["v0.1.10\n"]
