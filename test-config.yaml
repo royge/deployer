@@ -20,6 +20,20 @@ commandTests:
     args: ["version"]
     expectedOutput: ["v0.1.11"]
 
+  - name: "packer installation"
+    command: "which"
+    args: ["packer"]
+    expectedOutput: [
+        "/usr/bin/packer\n",
+        ]
+
+  - name: "packer version"
+    command: "packer"
+    args: ["--version"]
+    expectedOutput: [
+        "1.1.3\n",
+        ]
+
   - name: "make installation"
     command: "which"
     args: ["make"]
