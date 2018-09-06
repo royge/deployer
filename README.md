@@ -5,5 +5,6 @@
 ## What's Inside?
 
 * [Terraform v0.11.3](https://www.terraform.io/)
-* [awless v0.1.11](https://github.com/wallix/awless/)
-* [packer v1.1.3](https://www.packer.io/)
+* [Awless v0.1.11](https://github.com/wallix/awless/)
+* [Packer v1.1.3](https://www.packer.io/)
+* GNU Make 4.2.1
