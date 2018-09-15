@@ -1,6 +1,8 @@
 # The base image is alpine
 FROM alpine
 
+RUN apk add --no-network --no-cache --repositories-file /dev/null "apk-tools>2.10.1"
+
 # Update and install packages
 RUN apk update \
   && apk add ca-certificates wget make \
