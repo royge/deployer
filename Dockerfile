@@ -9,10 +9,10 @@ RUN apk update \
   && update-ca-certificates
 
 # Download terraform
-RUN wget --no-check-certificate https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip
+RUN wget --no-check-certificate https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip
 
 # Extract terraform
-RUN unzip terraform_0.11.3_linux_amd64.zip
+RUN unzip terraform_0.11.8_linux_amd64.zip
 
 # Move terraform binary to /usr/bin
 RUN mv terraform /usr/bin/
@@ -36,7 +36,7 @@ RUN unzip packer_1.1.3_linux_amd64.zip
 RUN mv packer /usr/bin/
 
 # Clean up
-RUN rm terraform_0.11.3_linux_amd64.zip
+RUN rm terraform_0.11.8_linux_amd64.zip
 RUN rm awless-linux-386.tar.gz
 RUN rm packer_1.1.3_linux_amd64.zip
 RUN apk del wget

@@ -8,7 +8,7 @@ commandTests:
   - name: "terraform version"
     command: "terraform"
     args: ["version"]
-    expectedOutput: ["v0.11.3\n"]
+    expectedOutput: ["v0.11.8\n"]
 
   - name: "awless installation"
     command: "which"
@@ -20,24 +20,12 @@ commandTests:
     args: ["version"]
     expectedOutput: ["v0.1.11"]
 
-  - name: "packer installation"
-    command: "which"
-    args: ["packer"]
-    expectedOutput: [
-        "/usr/bin/packer\n",
-        ]
-
   - name: "packer version"
     command: "packer"
     args: ["--version"]
     expectedOutput: [
         "1.1.3\n",
         ]
-
-  - name: "make installation"
-    command: "which"
-    args: ["make"]
-    expectedOutput: ["/usr/bin/make"]
 
   - name: "make version"
     command: "make"
