@@ -31,3 +31,8 @@ commandTests:
     command: "make"
     args: ["-v"]
     expectedOutput: ["GNU Make 4.2.*"]
+
+  - name: "jq installation"
+    command: "jq"
+    args: ["--version"]
+    expectedOutput: ["jq-1.6"]
