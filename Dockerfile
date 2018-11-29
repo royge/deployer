@@ -5,7 +5,13 @@ RUN apk add --no-network --no-cache --repositories-file /dev/null "apk-tools>2.1
 
 # Update and install packages
 RUN apk update \
-  && apk add ca-certificates wget make curl \
+  && apk add \
+    ca-certificates \
+    wget \
+    make \
+    curl \
+    openssl-dev \
+    openssh-client \
   && update-ca-certificates
 
 # Download terraform

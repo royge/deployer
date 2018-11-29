@@ -36,3 +36,13 @@ commandTests:
     command: "jq"
     args: ["--version"]
     expectedOutput: ["jq-1.6"]
+
+  - name: "ssh-keyscan installation"
+    command: "which"
+    args: ["ssh-keyscan"]
+    expectedOutput: ["/usr/bin/ssh-keyscan"]
+
+  - name: "ssh installation"
+    command: "which"
+    args: ["ssh"]
+    expectedOutput: ["/usr/bin/ssh"]

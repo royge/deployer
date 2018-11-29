@@ -9,3 +9,4 @@
 * [Packer v1.1.3](https://www.packer.io/)
 * [jq v1.6](https://stedolan.github.io/jq/)
 * GNU Make 4.2.1
+* OpenSSL Client
