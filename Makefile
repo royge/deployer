@@ -12,3 +12,13 @@ test:
 	container-structure-test test \
 		--image terraform:latest \
 		--config test-config.yaml
+
+ecr-login:
+	$$(aws ecr get-login --region=us-east-1 --no-include-email)
+
+ecr-repo:
+	aws ecr create-repository --repository-name terraform --region=$(AWS_REGION)
+
+ecr-push:
+	docker tag terraform:latest $(ECR_URL)/terraform:latest
+	docker push $(ECR_URL)/terraform:latest
