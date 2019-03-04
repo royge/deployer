@@ -1,33 +1,18 @@
 schemaVersion: '2.0.0'
 commandTests:
   - name: "terraform installation"
-    command: "which"
-    args: ["terraform"]
-    expectedOutput: ["/usr/bin/terraform\n"]
-
-  - name: "terraform version"
     command: "terraform"
     args: ["version"]
     expectedOutput: ["v0.11.10\n"]
 
-  - name: "awless installation"
-    command: "which"
-    args: ["awless"]
-    expectedOutput: ["/usr/bin/awless\n"]
-
-  - name: "awless version"
-    command: "awless"
-    args: ["version"]
-    expectedOutput: ["v0.1.11"]
-
-  - name: "packer version"
+  - name: "packer installation"
     command: "packer"
     args: ["--version"]
     expectedOutput: [
         "1.1.3\n",
         ]
 
-  - name: "make version"
+  - name: "make installation"
     command: "make"
     args: ["-v"]
     expectedOutput: ["GNU Make 4.2.*"]
@@ -46,3 +31,8 @@ commandTests:
     command: "which"
     args: ["ssh"]
     expectedOutput: ["/usr/bin/ssh"]
+
+  - name: "awscli installation"
+    command: "aws"
+    args: ["--version"]
+    expectedError: ["aws-cli/1.16.*"]

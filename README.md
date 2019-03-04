@@ -5,7 +5,7 @@
 ## What's Inside?
 
 * [Terraform v0.11.10](https://www.terraform.io/)
-* [Awless v0.1.11](https://github.com/wallix/awless/)
+* awscli v1.16
 * [Packer v1.1.3](https://www.packer.io/)
 * [jq v1.6](https://stedolan.github.io/jq/)
 * GNU Make 4.2.1
