@@ -1,6 +1,6 @@
 build:
 	docker build --pull -t terraform:latest .
-	docker tag terraform:awscli royge/terraform:latest
+	docker tag terraform:latest royge/terraform:latest
 
 push:
 	docker push royge/terraform:latest
