@@ -12,6 +12,7 @@ RUN apk update \
     curl \
     openssl-dev \
     openssh-client \
+    bash \
   && update-ca-certificates
 
 # Download terraform
