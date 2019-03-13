@@ -5,6 +5,11 @@ commandTests:
     args: ["version"]
     expectedOutput: ["v0.11.10\n"]
 
+  - name: "awless installation"
+    command: "awless"
+    args: ["version"]
+    expectedOutput: ["v0.1.11"]
+
   - name: "packer installation"
     command: "packer"
     args: ["--version"]
@@ -32,7 +37,7 @@ commandTests:
     args: ["ssh"]
     expectedOutput: ["/usr/bin/ssh"]
 
-  - name: "awscli installation"
-    command: "aws"
+  - name: "bash installation"
+    command: "bash"
     args: ["--version"]
-    expectedError: ["aws-cli/1.16.*"]
+    expectedOutput: ["GNU bash, version 4.4.19.*"]
