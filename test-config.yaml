@@ -40,4 +40,4 @@ commandTests:
   - name: "bash installation"
     command: "bash"
     args: ["--version"]
-    expectedOutput: ["GNU bash, version 4.4.19.*"]
+    expectedOutput: ["GNU bash, version 5.0.0.*"]
