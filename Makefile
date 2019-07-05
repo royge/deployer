@@ -14,7 +14,7 @@ test:
 		--config test-config.yaml
 
 ecr-login:
-	$$(aws ecr get-login --region=us-east-1 --no-include-email)
+	$$(aws ecr get-login --region=$(AWS_REGION) --no-include-email)
 
 ecr-repo:
 	aws ecr create-repository --repository-name terraform --region=$(AWS_REGION)
